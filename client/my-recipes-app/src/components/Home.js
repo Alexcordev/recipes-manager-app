@@ -5,7 +5,8 @@ import '../App.css';
 const Home = (props) => {
   return (
     <div className="container">
-      <h1>Que Puis je Faire Pour Toi?</h1>
+      <h1>Tableau de bord</h1>
+      <h3>Gestion des recettes</h3>
       <p></p>
     </div>
   );
