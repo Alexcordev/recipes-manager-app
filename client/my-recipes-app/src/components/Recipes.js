@@ -14,7 +14,7 @@ import RecipesList from "./RecipesList";
 function Recipes() {
   // ******** getRecipes: va chercher la liste des recettes dans la Base de Donnée -MySql
   const [recipes, setRecipes] = useState([]);
-  const getRecipes = () => {
+  const getRecipes = (event) => {
     fetch("http://localhost:5500/api/recipes")
       .then((response) => {
         return response.json();
@@ -38,16 +38,28 @@ function Recipes() {
 
   return (
     <React.Fragment>
+    <section>
+      <button className="button-list" onClick={getRecipes}>
+        Click ici pour l'Affichage
+      </button>
+    </section>
+    <section>
+      <RecipesList recipes={recipes} />
+    </section>
+  </React.Fragment>
+  );
+}
+// Fin fct Recipes**************************************************************
+export default Recipes;
+/*
+    <React.Fragment>
       <section>
         <button className="buttonList" onClick={getRecipes}>
-          Voir Liste Des Recettes
+          Click ici pour l'Affichage
         </button>
       </section>
       <section>
         <RecipesList recipes={recipes} />
       </section>
     </React.Fragment>
-  );
-}
-// Fin fct Recipes**************************************************************
-export default Recipes;
+    */

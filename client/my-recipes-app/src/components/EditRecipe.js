@@ -20,6 +20,7 @@ const EditRecipe = () => {
             ingredients: ingredients,
             preparation: preparation
         });
+        alert("Recette Modifiée avec succès");
         //history.push("/");
     }
  
@@ -37,9 +38,58 @@ const EditRecipe = () => {
  
     return (
         <div>
-            <form onSubmit={ updateRecipe }>
+            <h1>Modifiez Votre Recette</h1>
+
+            <form className="card" onSubmit={ updateRecipe }>
+                <h2>
+                    <input 
+                        className="name"
+                        type="text"
+                        placeholder="Nom"
+                        value={ name }
+                        onChange={ (e) => setName(e.target.value) }
+                    />
+                </h2>
+ 
+                <h2>                    
+                    <input 
+                        className="ingredient"
+                        type="text"
+                        placeholder="Ingrédients"
+                        value={ ingredients }
+                        onChange={ (e) => setIngredients(e.target.value) }
+                    />
+                </h2>
+
+                <p>
+                    <input 
+                        className="preparation"
+                        type="text"
+                        placeholder="Préparation"
+                        value={ preparation }
+                        onChange={ (e) => setPreparation(e.target.value) }
+                    />
+                </p>
+ 
+               
+                    <button>Modifier</button>
+                
+            </form>
+        </div>
+    )
+       
+}
+ 
+export default EditRecipe
+/*
+ return (
+        <div>
+            <h1>Modifie Ta Recette</h1>
+
+            <form className="card" onSubmit={ updateRecipe }>
+
                 <div className="field">
-                    <label className="label">Nom</label>
+                    <label className="label">Nom : </label>
                     <input 
                         className="input"
                         type="text"
@@ -50,7 +100,7 @@ const EditRecipe = () => {
                 </div>
  
                 <div className="field">
-                    <label className="label">Ingrédients</label>
+                    <label className="label">Ingrédients :</label>
                     <input 
                         className="input"
                         type="text"
@@ -60,7 +110,7 @@ const EditRecipe = () => {
                     />
                 </div>
                 <div className="field">
-                    <label className="label">Préparation</label>
+                    <label className="label">Préparation :</label>
                     <input 
                         className="input"
                         type="text"
@@ -76,6 +126,4 @@ const EditRecipe = () => {
             </form>
         </div>
     )
-}
- 
-export default EditRecipe
+    */

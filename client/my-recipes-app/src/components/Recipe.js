@@ -13,19 +13,12 @@ const Recipe = (props) => {
 
   return (
     <div className="card">
-      <h2 className="name">{props.name.toUpperCase()}</h2>
-      <span className="ingredient">{props.ingredients}</span>
-      <p className="preparation">{props.preparation}</p>
+      <h2 className="card-name">{props.name.toUpperCase()}</h2>
+      <h2 className="card-ingredient">{props.ingredients}</h2>
+      <p className="card-preparation">{props.preparation}</p>
       <div className="button-container">
-        <button className="buttonSupp" onClick={() => deleteRecipe(props.id)}>
-          Supprimer
-        </button>
-        <button
-          className="buttonEdit"
-          onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}
-        >
-          Modifier
-        </button>
+        <button onClick={() => deleteRecipe(props.id)}>Supprimer</button>
+        <button onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}>Modifier</button>
       </div>
     </div>
   );

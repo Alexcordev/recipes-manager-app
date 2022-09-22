@@ -33,3 +33,10 @@ tout transférer dans le répertoire principal (le mien)
 pour supprimer une branche
 
         { git branch -d nom-de-la-branche }
+
+Pour cloner l appli d'alex:
+ecrire ceci dans le terminal a la place qu'on veut mettre le clone:
+git clone https://github.com/Alexcordev/recipes-manager-app.git 
+
+Acces au github Alex: taper dans google l'adresse:
+https://github.com/Alexcordev/recipes-manager-app

@@ -56,6 +56,7 @@ router.post('/add-recipe', function(req, res){
 //****************************************************** */
 router.get('/delete-recipe/:id', function(req, res, next) {
   var id= req.params.id;
+
   var sql = 'DELETE FROM recipes WHERE id = ?';
 
   db.query(sql, [id], function (err, data) {
