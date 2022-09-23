@@ -1,3 +1,5 @@
+// Recipes.js modifié le 23 sept 2022
+//***********************************************************************************
 import React, { useState } from "react";
 //import deleteRecipe from "./DeleteRecipe";
 import RecipesList from "./RecipesList";
@@ -34,32 +36,37 @@ function Recipes() {
   };
   // ******** fin du getRecipes
 
-  
-
   return (
     <React.Fragment>
-    <section>
-      <button className="button-list" onClick={getRecipes}>
-        Click ici pour l'Affichage
-      </button>
-    </section>
-    <section>
-      <RecipesList recipes={recipes} />
-    </section>
+      <div id="image-affichage"> 
+        <section>
+          <button className="button-list" onClick={getRecipes}>
+            Click ici pour l'Affichage
+          </button>
+        </section>
+        <section>
+          <RecipesList recipes={recipes} />
+        </section>
+      </div> 
   </React.Fragment>
   );
 }
 // Fin fct Recipes**************************************************************
 export default Recipes;
+
 /*
+    return (
     <React.Fragment>
-      <section>
-        <button className="buttonList" onClick={getRecipes}>
-          Click ici pour l'Affichage
-        </button>
-      </section>
-      <section>
-        <RecipesList recipes={recipes} />
-      </section>
-    </React.Fragment>
-    */
+      <div id="image-affichage"> 
+        <section>
+          <button className="button-list" onClick={getRecipes}>
+            Click ici pour l'Affichage
+          </button>
+        </section>
+        <section>
+          <RecipesList recipes={recipes} />
+        </section>
+      </div> 
+  </React.Fragment>
+  );
+*/

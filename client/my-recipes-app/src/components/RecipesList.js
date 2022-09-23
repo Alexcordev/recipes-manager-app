@@ -1,3 +1,5 @@
+// RecipesList.js modifié le 23 sept 2022
+//***********************************************************************************
 import React from "react";
 import Recipe from "./Recipe";
 

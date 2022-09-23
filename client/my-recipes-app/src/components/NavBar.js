@@ -1,3 +1,5 @@
+// NavBar.js modifié le 23 sept 2022
+//***********************************************************************************
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
@@ -7,6 +9,7 @@ const NavBar = (props) => {
   return (
   
     <header className="header-container">
+     
       <div>
         <a className="header-container-brand" href="index.html">F&A</a>
       </div> 

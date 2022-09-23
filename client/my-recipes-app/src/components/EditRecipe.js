@@ -1,3 +1,5 @@
+// Editrecipe.js
+//***********************************************************************************
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 ///import { useLocation } from "react-router-dom";
@@ -37,10 +39,12 @@ const EditRecipe = () => {
     }
  
     return (
-        <div>
+        
+        <div id="image-edit">
+            
             <h1>Modifiez Votre Recette</h1>
 
-            <form className="card" onSubmit={ updateRecipe }>
+            <form className="card-input" onSubmit={ updateRecipe }>
                 <h2>
                     <input 
                         className="name"
@@ -52,7 +56,7 @@ const EditRecipe = () => {
                 </h2>
  
                 <h2>                    
-                    <input 
+                    <textarea 
                         className="ingredient"
                         type="text"
                         placeholder="Ingrédients"
@@ -62,7 +66,7 @@ const EditRecipe = () => {
                 </h2>
 
                 <p>
-                    <input 
+                    <textarea
                         className="preparation"
                         type="text"
                         placeholder="Préparation"

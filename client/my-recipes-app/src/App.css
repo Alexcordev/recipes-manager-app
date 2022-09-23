@@ -1,26 +1,16 @@
- /*
- * {
-  box-sizing: border-box;
-}
-/*
-body{
-  /*font-family: sans-serif; 
-  margin:0
-}
-*/
+/* App.css modifier le 23 Sept 2022
+/*************************************************************/
 /* main-header */
 .header-container {
   display:inline-block;
   width: 100%;
   background: rgb(23, 6, 175);
   padding: 16px 16px; 
- 
 }
 
 .header-container > div {
   display:inline-block;
-  /* vertical-align:middle;*/
-  
+  /* vertical-align:middle;*/  
 }
 
 /* main-header-brand */
@@ -33,13 +23,13 @@ body{
   /* 'Franklin Gothic Medium';*/
   margin-right: 100px
 }
+
 /* main-nav */
 .main-nav {
   display: inline-block;
   text-align: right;
   width: calc(100% - 200px);
   /*vertical-align:middle;*/
- 
 } 
 /* main-nav-items */
 .nav-items{
@@ -47,7 +37,6 @@ body{
   margin:0;
   padding:0;
   list-style:none;
-
 }
 /* main-nav-item */
 .nav-item {
@@ -57,7 +46,6 @@ body{
 }
 
 .nav-item--cta {
-  
 background-color: blueviolet;
 padding: 6px 6px;
 border-radius: 8px;
@@ -69,31 +57,41 @@ color:beige
 .nav-item:hover,.nav-item:active{
   color: red;
 }
-.card {
+/* Formatage du contenu de chaque page */
+.card , .card-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* titre */
   width: 250px;
   height: 275px;
   padding: 25px 15px;
-  margin: 20px;
+  margin: 10px;
   /*border: 3px solid black;*/
   border-radius: 7px;
   background-color: rgb(244, 246, 247);
-  box-shadow: 1px 3px 5px black;
+  box-shadow: 5px 3px 5px black; 
 }
-.card-name, .name {
+.card-input {
+  flex-wrap: wrap;
+  /* margin: 40px 20px; */  
+  margin: 0px 50px; 
+}
+
+.card-name, card-imput .name {
   font-size: 15px;
   color: red;
+  height: 10px;
 }
-.card-ingredient, .ingredient {
+.card-ingredient, card-input .ingredient {
   font-size: 12px;
-  color: black;
+  color: green;
+  height: 200px;
 }
-.card-preparation, .preparation {
+.card-preparation, card-input .preparation {
   font-size: 12px;
   color: gray; 
+  height: 200px;
 }
 .button-container {
   display: flex;
@@ -110,8 +108,8 @@ color:beige
 
 .container {
   display: block; 
-  width: 50vw;
-  height: 50vh; 
+  width: 600px;
+  height: 500px; 
 }
 .wrap-container {
   display: flex;
@@ -120,5 +118,38 @@ color:beige
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 40px 20px;  
+  /* margin: 40px 20px; */  
+  margin: 0px 50px; 
+}
+
+/* Mes images */
+#image-home{
+  background-image:url("bienvenue.jpg");
+  background-color: aquamarine;
+   width: 800px;
+  height:500px;
+  margin: 0px ;
+}
+
+#image-add{
+  background-image:url("assiette.jpg");
+  background-color: aquamarine;
+   width: 800px;
+  height:500px;
+  margin: 0px ;
+}
+
+#image-affichage{
+  background-image:url("bienvenue.jpg"); 
+  background-color: aquamarine;
+   width: 800px;
+  height:500px;
+  margin: 0px ;
+}
+#image-edit{
+  background-image:url("freedom.jpg"); 
+  background-color: aquamarine;
+   width: 800px;
+  height:500px;
+  margin: 0px ;
 }

@@ -1,3 +1,5 @@
+// Addrecipe.js modifié le 23 sept 2022
+
 import React, { useState } from "react";
 
 const AddRecipe = (props) => {
@@ -24,9 +26,9 @@ const AddRecipe = (props) => {
   };
   // ajout de recette
   return (
-    <div>
+    <div id="image-add">
       <h1>Ajoutez Votre Recette</h1>
-      <form className="card" id="create-recipe-form" onSubmit={handleSubmit}>
+      <form className="card-input" id="create-recipe-form" onSubmit={handleSubmit}>
         <h2>
           <input className="name"
             type="text"
@@ -37,7 +39,7 @@ const AddRecipe = (props) => {
         </h2>
         
         <h2>
-          <input className="ingredient"
+          <textarea className="ingredient"
             type="text"
             value={recipe.ingredients}
             onChange={(ev) =>
@@ -48,7 +50,7 @@ const AddRecipe = (props) => {
         </h2>
         
         <p>
-          <input calssName="preparation"
+          <textarea calssName="preparation"
             type="text"
             value={recipe.preparation}
             onChange={(ev) =>

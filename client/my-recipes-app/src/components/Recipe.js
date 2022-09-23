@@ -1,4 +1,5 @@
-//import React, { useState } from "react";
+// Recipe.js modifié le 23 sept 2022
+//***********************************************************************************
 import deleteRecipe from "./DeleteRecipe";
 import { useNavigate } from "react-router-dom";
 
