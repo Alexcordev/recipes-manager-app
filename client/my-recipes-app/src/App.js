@@ -2,7 +2,7 @@
 //import { Routes, Route, Link } from "react-router-dom"; Link non utilisé
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-// import './App.css';
+import './App.css';
 import Home from "./components/Home";
 import AddRecipe from "./components/AddRecipe";
 import Recipes from "./components/Recipes";
@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
     <React.Fragment>
-      <header>
+      <header className="header-container">
         <NavBar />
       </header>
       <Routes> 

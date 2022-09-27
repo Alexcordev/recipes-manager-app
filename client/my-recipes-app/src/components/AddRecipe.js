@@ -28,18 +28,16 @@ const AddRecipe = (props) => {
   return (
     <div id="image-add">
       <h1>Ajoutez Votre Recette</h1>
-      <form className="card-input" id="create-recipe-form" onSubmit={handleSubmit}>
-        <h2>
+      <div className="card">
+      <form id="create-recipe-form" onSubmit={handleSubmit}>
+        
           <input className="name"
             type="text"
             value={recipe.name}
             onChange={(ev) => setRecipe({ ...recipe, name: ev.target.value })}
             placeholder="Name"
             />
-        </h2>
-        
-        <h2>
-          <textarea className="ingredient"
+          <textarea className="ingredients"
             type="text"
             value={recipe.ingredients}
             onChange={(ev) =>
@@ -47,10 +45,7 @@ const AddRecipe = (props) => {
             }
             placeholder="Ingredients"
           />
-        </h2>
-        
-        <p>
-          <textarea calssName="preparation"
+         <textarea className="preparation"
             type="text"
             value={recipe.preparation}
             onChange={(ev) =>
@@ -58,13 +53,13 @@ const AddRecipe = (props) => {
             }
             placeholder="Preparation"
          />
-        </p>
 
         <div className="field">
-          <button>Ajouter</button>
+          <button className="button-container">Ajouter</button>
         </div>
         
       </form>
+    </div>
     </div>
   );
 };

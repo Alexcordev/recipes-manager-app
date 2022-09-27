@@ -13,13 +13,11 @@ const Recipe = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card">
+    <div className="recipe-card">
       <h2 className="card-name">{props.name.toUpperCase()}</h2>
-      <h2 className="card-ingredient">{props.ingredients}</h2>
-      <p className="card-preparation">{props.preparation}</p>
-      <div className="button-container">
-        <button onClick={() => deleteRecipe(props.id)}>Supprimer</button>
-        <button onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}>Modifier</button>
+      <div className="recipe-button-container">
+        <button className="button-del" onClick={() => deleteRecipe(props.id)}>Supprimer</button>
+        <button className="button-edit" onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}>Modifier</button>
       </div>
     </div>
   );
