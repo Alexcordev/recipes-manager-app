@@ -26,7 +26,7 @@ const AddRecipe = (props) => {
   };
   // ajout de recette
   return (
-    <div id="image-add">
+    <div id="add-image">
       <h1>Ajoutez Votre Recette</h1>
       <form className="card-input" id="create-recipe-form" onSubmit={handleSubmit}>
         <h2>

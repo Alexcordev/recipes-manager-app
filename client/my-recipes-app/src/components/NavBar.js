@@ -19,9 +19,7 @@ const NavBar = (props) => {
           <li>
             <Link className="nav-item--cta" to="/">Accueil</Link>
           </li>
-          <li>
-            <Link className="nav-item" to="/add-recipe">Ajout</Link>
-          </li>
+         
           <li>
             <Link className="nav-item" to="/recipes" >Affichage</Link>
           </li>
@@ -35,3 +33,6 @@ const NavBar = (props) => {
 };
 // <Outlet /> dans 28
 export default NavBar;
+/*
+ <li><Link className="nav-item" to="/add-recipe">Ajout</Link></li>
+ */

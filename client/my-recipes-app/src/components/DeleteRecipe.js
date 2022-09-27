@@ -1,4 +1,4 @@
-//import React from 'react';
+// DeleteRecipe.js    Modifier 23 Sept 2022
 
 // ****** La Reponse de suppression (lors du Click Bouton Supp dans recipe.js)
 //est envoyé par MySQL via api/delete-recipe

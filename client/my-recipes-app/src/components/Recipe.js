@@ -1,5 +1,6 @@
 // Recipe.js modifié le 23 sept 2022
 //***********************************************************************************
+
 import deleteRecipe from "./DeleteRecipe";
 import { useNavigate } from "react-router-dom";
 
@@ -13,17 +14,46 @@ const Recipe = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card">
-      <h2 className="card-name">{props.name.toUpperCase()}</h2>
-      <h2 className="card-ingredient">{props.ingredients}</h2>
-      <p className="card-preparation">{props.preparation}</p>
-      <div className="button-container">
-        <button onClick={() => deleteRecipe(props.id)}>Supprimer</button>
-        <button onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}>Modifier</button>
-      </div>
+    <div>
+     
+      <ul className="recipe">
+
+        
+        <li className="recipe-name"> {props.name.toUpperCase()} </li>
+
+        <button className="recipe-buttons" onClick={
+          () => navigate("/recipe-aff", { state: { id: props.id } })}>
+          Afficher
+        </button>
+
+        <button className="recipe-buttons" onClick={
+          () => navigate("/add-recipe", { state: { id: props.id } })}>
+          Ajouter
+        </button>
+
+        <button className="recipe-buttons" onClick={
+            () => navigate("/edit-recipe", { state: { id: props.id } })}>
+            Modifier
+        </button>
+
+        <button className="recipe-buttons" onClick={() => deleteRecipe(props.id)}>
+          Supprimer
+        </button>
+      </ul>
     </div>
   );
 };
 
 export default Recipe;
 // fin fct recipe***********************************************
+/*
+<div className="recipe">
+      <h2 className="recipe-name">{props.name.toUpperCase()}</h2>
+      <h2 className="recipe-ingredient">{props.ingredients}</h2>
+      <p className="recipe-preparation">{props.preparation}</p>
+      <div className="recipe-buttons">
+        <button onClick={() => deleteRecipe(props.id)}>Supprimer</button>
+        <button onClick={() => navigate("/edit-recipe", { state: { id: props.id } })}>Modifier</button>
+      </div>
+    </div>
+    */

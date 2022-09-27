@@ -1,8 +1,7 @@
-// Editrecipe.js
+// Editrecipe.js  Modifier 23 Sept 2022
 //***********************************************************************************
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-///import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
  
@@ -10,8 +9,7 @@ const EditRecipe = () => {
     const [name, setName] = useState('');
     const [ingredients, setIngredients] = useState('');
     const [preparation, setPreparation] = useState('');
-    //const history = useHistory();
-    //const { id } = useParams();
+   
     const { state } = useLocation();
     const { id } = state; // Read values passed on state
  
@@ -26,9 +24,7 @@ const EditRecipe = () => {
         //history.push("/");
     }
  
-    useEffect(() => {
-        getRecipeById();
-    }, []);
+    useEffect(() => {getRecipeById(); }, []);
  
     const getRecipeById = async () => {
         const response = await axios.get(`http://localhost:5500/api/get-recipe-by-id/${id}`);
