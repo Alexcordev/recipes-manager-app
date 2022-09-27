@@ -29,7 +29,18 @@ function Recipes() {
           console.log(err);
         });
   };
-  //Affichage conditionnel si le tableau recipes ne contient en ligne 36
+
+    /* Affichage conditionnel (ligne 46) si le tableau recipes ne contient pas de recette, 
+    à ce moment, l'image en background est affichée. Si le tableau contient des recettes, alors 
+    l'image ne s'affiche pas. 
+    La condition est entre { } c'est comme si on faisait un if et un else :
+    if recipes.length === 0 {<div id="image-affichage"> </div>} 
+    else {
+    <section>
+       <RecipesList recipes={recipes} />
+    </section>
+    }
+  */
   return (
     <React.Fragment>
       {recipes.length === 0 && 
