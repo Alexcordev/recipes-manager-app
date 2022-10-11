@@ -12,7 +12,7 @@ const AddRecipe = (props) => {
   const handleSubmit = (event) => {
     let { name, ingredients, preparation } = recipe;
     document.getElementById("create-recipe-form").reset();
-    fetch("http://localhost:5500/api/add-recipe", {
+    fetch("http://localhost:5500/api/addRecipeDb", {
       method: "POST",
       body: JSON.stringify({
         name: name,
@@ -50,7 +50,7 @@ const AddRecipe = (props) => {
         </h2>
         
         <p>
-          <textarea calssName="preparation"
+          <textarea className="preparation"
             type="text"
             value={recipe.preparation}
             onChange={(ev) =>

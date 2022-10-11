@@ -22,7 +22,7 @@ const Recipe = (props) => {
         <li className="recipe-name"> {props.name.toUpperCase()} </li>
 
         <button className="recipe-buttons" onClick={
-          () => navigate("/recipe-aff", { state: { id: props.id } })}>
+          () => navigate("/aff-recipe", { state: { id: props.id } })}>
           Afficher
         </button>
 

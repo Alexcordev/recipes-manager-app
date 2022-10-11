@@ -20,7 +20,7 @@ function Recipes() {
     useEffect(() => {fetchRecipes();}, []);
     const fetchRecipes = () => {
       axios
-        .get('http://localhost:5500/api/recipes')
+        .get('http://localhost:5500/api/recipesDb')
         .then((res) => {
           console.log(res);
           setRecipes(res.data);
@@ -43,18 +43,30 @@ function Recipes() {
   */
   return (
     <React.Fragment>
-      {recipes.length === 0 && 
-      <div id="image-affichage"> 
-      </div> }
-        <section>
+      {recipes.length === 0 && <div id="image-affichage"> </div> }
+      <section>
         <h1>Affichage et modification des Recettes</h1>
-          <RecipesList recipes={recipes} />
-        </section>
+        <RecipesList recipes={recipes} />
+      </section>
     </React.Fragment>
   );
 }
 // Fin fct Recipes**************************************************************
 export default Recipes;
+/*
+ return (
+    <React.Fragment>
+      {recipes.length === 0 && <div id="image-affichage"> </div> }
+        <section>
+          <h1>Affichage et modification des Recettes</h1>
+          <RecipesList recipes={recipes} />
+        </section>
+    </React.Fragment>
+  );
+  */
+
+
+
 
 
 /*

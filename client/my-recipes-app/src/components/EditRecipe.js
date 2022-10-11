@@ -15,25 +15,25 @@ const EditRecipe = () => {
  
     const updateRecipe = async (e) => {
         e.preventDefault();
-        await axios.patch(`http://localhost:5500/api/edit-recipe/${id}`,{
+        await axios.patch(`http://localhost:5500/api/editRecipeDb/${id}`,{
             name: name,
             ingredients: ingredients,
             preparation: preparation
         });
-        alert("Recette Modifiée avec succès");
+        alert("Recette Modifiée 1 avec succès");
         //history.push("/");
     }
  
     useEffect(() => {getRecipeById(); }, []);
  
     const getRecipeById = async () => {
-        const response = await axios.get(`http://localhost:5500/api/get-recipe-by-id/${id}`);
+        const response = await axios.get(`http://localhost:5500/api/getRecipeById/${id}`);
         console.log(response.data.data[0].name);
         setName(response.data.data[0].name);
         setIngredients(response.data.data[0].ingredients);
         setPreparation(response.data.data[0].preparation);
     }
- 
+    
     return (
         
         <div id="image-edit">
@@ -79,7 +79,7 @@ const EditRecipe = () => {
     )
        
 }
- 
+
 export default EditRecipe
 /*
  return (

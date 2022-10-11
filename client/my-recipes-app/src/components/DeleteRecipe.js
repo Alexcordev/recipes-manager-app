@@ -6,7 +6,7 @@
 
 async function deleteRecipe(id) {
   
-  const response = await fetch(`http://localhost:5500/api/delete-recipe/${id}`);
+  const response = await fetch(`http://localhost:5500/api/deleteRecipeDb/${id}`);
   if (response.status === 200) {
     alert("Recette supprimée avec succès");
     console.log(response);
