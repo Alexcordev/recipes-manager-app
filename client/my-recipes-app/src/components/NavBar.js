@@ -37,3 +37,6 @@ const NavBar = (props) => {
 };
 // <Outlet /> dans 28
 export default NavBar;
+/*
+ <li><Link className="nav-item" to="/add-recipe">Ajout</Link></li>
+ */

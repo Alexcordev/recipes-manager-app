@@ -21,6 +21,16 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 });
 
+// Route Pour:Affichage d'un Recette existante dans la page localhost:3000/recipe-aff
+//****************************************************************************** */ 
+router.get("/recipe-aff", (req, res) => {
+  var sql='SELECT * FROM recipes';
+  db.query(sql, function (err, data, fields) {
+  console.log(data);
+  res.send(data);
+  }); 
+});
+
 
 // Route Pour:Liste des Recettes existante s'afficherons dans la page localhost:3000/recipes
 //****************************************************************************** */ 
@@ -67,9 +77,9 @@ router.get('/delete-recipe/:id', function(req, res, next) {
 
 });
 
-// Edit (Modifier) des Recettes qui seront affichées dans la page localhost:3000/add-recip
-//******************************************************************************** */
-//router.put('/edit-recipe/:id', function(req, res){
+// Edit (Modifier) des Recettes qui seront affichées dans la page localhost:3000/edit-recipe
+//**************************************************************************************** */
+//Cherche la recette à modifier
     router.get('/get-recipe-by-id/:id', function(req, res){  
         //Récupération des données depuis chacun des champs du formulaire html 
         //et les remplace dans MySQL
@@ -88,12 +98,10 @@ router.get('/delete-recipe/:id', function(req, res, next) {
        });
       });
 
-// Edit (Modifier) des Recettes qui seront affichées dans la page localhost:3000/add-recip
-//******************************************************************************** */
-//router.put('/edit-recipe/:id', function(req, res){
+//Enregistre les modification dans la Base de donnée
   router.patch('/edit-recipe/:id', function(req, res){  
-  //Récupération des données depuis chacun des champs du formulaire html 
-  //et les remplace dans MySQL
+//Récupération des données depuis chacun des champs du formulaire html 
+//et les remplace dans MySQL
    var id= req.params.id;
    var name=req.body.name;
    var ingredients = req.body.ingredients; 

@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import '../App.css';
+
 const AddRecipe = (props) => {
   const [recipe, setRecipe] = useState({
     name: "",
@@ -26,9 +28,9 @@ const AddRecipe = (props) => {
   };
   // ajout de recette
   return (
-    <div id="image-add">
-      <h1>Ajoutez Votre Recette</h1>
+    <div id="add-image">
       <div className="card">
+        <div className="card-header"><h1>Ajoutez Votre Recette</h1></div>
       <form id="create-recipe-form" onSubmit={handleSubmit}>
         
           <input className="name"

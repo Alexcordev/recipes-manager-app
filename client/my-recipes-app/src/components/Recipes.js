@@ -1,3 +1,5 @@
+// Recipes.js modifié le 26sept 2022 celui ci skip le bouton click pour afficher
+//***********************************************************************************
 // Recipes.js modifié le 23 sept 2022
 //***********************************************************************************
 import React, { useState, useEffect } from 'react';
@@ -35,11 +37,12 @@ function Recipes() {
 
   return (
     <React.Fragment>
-      {recipes.length === 0 && 
-      <div id="image-affichage"> 
-      </div> }
+      
+      <div id="image-display"> 
+      
       <div className='recipes-container'>
           <RecipesList recipes={recipes} />
+      </div>
       </div>
     </React.Fragment>
   );
