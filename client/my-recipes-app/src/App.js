@@ -6,7 +6,7 @@ import './App.css';
 import Home from "./components/Home";
 import AddRecipe from "./components/AddRecipe";
 import Recipes from "./components/Recipes";
-import RecipeAff from "./components/RecipeAff";
+import RecipeAff from "./components/AffRecipe";
 import EditRecipe from "./components/EditRecipe";
 import NavBar from "./components/NavBar";
 

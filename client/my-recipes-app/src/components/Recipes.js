@@ -25,7 +25,7 @@ function Recipes() {
     }, []);
     const fetchRecipes = () => {
       axios
-        .get('http://localhost:5500/api/recipes')
+        .get('http://localhost:5500/api/recipesDb')
         .then((res) => {
           setRecipes(res.data);
         })

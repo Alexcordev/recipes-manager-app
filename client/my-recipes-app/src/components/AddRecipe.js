@@ -14,7 +14,7 @@ const AddRecipe = (props) => {
   const handleSubmit = (event) => {
     let { name, ingredients, preparation } = recipe;
     document.getElementById("create-recipe-form").reset();
-    fetch("http://localhost:5500/api/add-recipe", {
+    fetch("http://localhost:5500/api/addRecipeDb", {
       method: "POST",
       body: JSON.stringify({
         name: name,
