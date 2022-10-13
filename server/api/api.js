@@ -86,7 +86,7 @@ router.get('/deleteRecipeDb/:id', function(req, res, next) {
 // Edit (Modifier) des Recettes qui seront affichées dans la page localhost:3000/edit-recipe
 //**************************************************************************************** */
 //Cherche la recette à modifier
-    router.get('/getRecipeById/:id', function(req, res){  
+    router.get('/get-recipe-by-id/:id', function(req, res){  
         //Récupération des données depuis chacun des champs du formulaire html 
         //et les remplace dans MySQL
          var id= req.params.id;

@@ -28,7 +28,7 @@ const EditRecipe = () => {
     useEffect(() => {getRecipeById(); }, []);
  
     const getRecipeById = async () => {
-        const response = await axios.get(`http://localhost:5500/api/getRecipeById/${id}`);
+        const response = await axios.get(`http://localhost:5500/api/get-recipe-by-id/${id}`);
         console.log(response.data.data[0].name);
         setName(response.data.data[0].name);
         setIngredients(response.data.data[0].ingredients);

@@ -25,7 +25,7 @@ const RecipeAff = (props) => {
 
   var output = [];
 
-  /*const updateRecipe = async (e) => {
+  const updateRecipe = async (e) => {
         e.preventDefault();
         await axios.patch(`http://localhost:5500/api/edit-recipe/${id}`,{
             name: name,
@@ -34,7 +34,7 @@ const RecipeAff = (props) => {
         });
         alert("Recette Visualisée avec succès");
         //history.push("/");
-    }*/
+    }
 
   useEffect(() => {
     getRecipeById(id);
@@ -56,7 +56,7 @@ const RecipeAff = (props) => {
   return (
     <div id="image-aff">
       <div className="recipesDetails-wrap">
-      <RecipeDetails name={name} ingredients={ingredients} preparation={preparation} output={output} />
+      <RecipeDetails key={id} name={name} ingredients={ingredients} preparation={preparation} output={output} />
       </div>
       
 
