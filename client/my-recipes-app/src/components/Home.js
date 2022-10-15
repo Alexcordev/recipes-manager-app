@@ -2,6 +2,7 @@
 //***********************************************************************************
 import React from "react";
 import '../App.css';
+import SideBarMenu from "./SidebarMenu";
 
 const Home = (props) => {
   return (

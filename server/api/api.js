@@ -104,6 +104,27 @@ router.get('/deleteRecipeDb/:id', function(req, res, next) {
        });
       });
 
+      router.get('/get-recipes-by-category/:categorie', function(req, res){  
+        //Récupération des données depuis chacun des champs du formulaire html 
+        //et les remplace dans MySQL
+         var category= req.params.categorie.toLowerCase();
+         console.log(category);
+         /*let recipeQuery = `SELECT * FROM recipes WHERE category = ${category}`;*/
+         /*let recipeQuery = `SELECT * FROM recipes WHERE category = ${category}`;*/
+         let recipeQuery = `SELECT * FROM recipes WHERE category = ?`;
+        // const recipe={name, ingredients, preparation} // not used
+       
+        db.query(recipeQuery, [category], (err, results) => {
+          if(err) {
+            console.log("recipe not found");
+            res.send(err)
+          } else {
+             res.send({ error: false, data: results, message: 'recipe found' });
+          }
+       });
+      });
+      
+
 //Enregistre les modification dans la Base de donnée
   router.patch('/editRecipeDb/:id', function(req, res){  
 //Récupération des données depuis chacun des champs du formulaire html 
